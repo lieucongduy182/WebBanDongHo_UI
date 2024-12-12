@@ -1,0 +1,10 @@
+/* product-gallery-detail */
+
+.product-gallery-detail .swiper-slide.swiper-slide-thumb-active {
+  border: 2px solid #6e9c92;
+  border-radius: 8px;
+}
+
+.product-gallery-detail .swiper.swiper-initialized.swiper-horizontal {
+  position: static !important;
+}
