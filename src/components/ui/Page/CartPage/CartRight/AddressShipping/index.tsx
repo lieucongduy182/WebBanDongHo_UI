@@ -24,6 +24,7 @@ export const AddressShipping = (props: Props) => {
             variant="text"
             fontWeight="font-normal"
             width="w-max"
+            color="text-orange-500"
             textColor="text-orange-500"
           >
             Thay đổi
