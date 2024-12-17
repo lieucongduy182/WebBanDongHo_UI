@@ -7,7 +7,6 @@ import { ShippingType } from "@/types/profile";
 
 import { AddressShipping } from "./AddressShipping";
 import { Calculator } from "./Calculator";
-import { Paypal } from "./Paypal";
 
 interface Props {
   shipping: ShippingType;
@@ -25,7 +24,6 @@ export const CartRight = (props: Props) => {
     finalPrice,
     isLoadingButton,
     handleSubmitOrder,
-    handleApproveOrderPaypal,
   } = props;
   return (
     <div className=" h-full lg:w-[360px] w-full flex flex-col gap-4">
@@ -33,12 +31,6 @@ export const CartRight = (props: Props) => {
 
       <Calculator finalPrice={finalPrice} />
 
-      {finalPrice() > 0 && (
-        <Paypal
-          finalPrice={finalPrice}
-          handleApproveOrderPaypal={handleApproveOrderPaypal}
-        />
-      )}
       <ButtonCustom
         style={"py-3 flex justify-center items-center"}
         borderRadius="rounded"

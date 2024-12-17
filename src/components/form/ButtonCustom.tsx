@@ -6,6 +6,7 @@ import { Loading } from "../ui/Loading";
 interface Props {
   title?: string;
   backgroundColor?: string;
+  textColor?: string;
   style?: string;
   onClick?: () => void;
   color?: string;
@@ -29,6 +30,7 @@ export const ButtonCustom = (props: Props) => {
   const {
     title,
     backgroundColor = "bg-gradient-to-r from-slate-800 to-zinc-800",
+    textColor = "!text-primary",
     color = "text-white",
     fontWeight = "font-medium",
     borderColor = "",
@@ -60,7 +62,7 @@ export const ButtonCustom = (props: Props) => {
           "bg-white text-slate-900 disabled:bg-blue-20 border border-slate-900";
         break;
       case "text":
-        classes = "!text-primary bg-transparent";
+        classes = `${textColor} bg-transparent `;
         break;
       default:
         break;
